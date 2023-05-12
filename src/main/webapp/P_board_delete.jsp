@@ -47,7 +47,7 @@ writer = to.getWriter();
 <script src="js/delete.js"></script>
 <title>Board Delete</title>
 </head>
-<body>
+<body style="height:100%;">
 <%@include file="include/header.jsp"%>
 
 <div class="container">
