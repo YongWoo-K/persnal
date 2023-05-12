@@ -28,7 +28,7 @@ if(userID1 == null){
 <script src="js/list.js"></script>
 <title>Board Write</title>
 </head>
-<body>
+<body style="height:100%;">
 <%@include file="include/header.jsp"%>
 
 <div class="container">

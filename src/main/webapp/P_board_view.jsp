@@ -51,7 +51,7 @@ String seq_next = to_next.getSeq();
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <title></title>
 </head>
-<body>
+<body style="height:100%;">
 <%@include file="include/header.jsp"%>
 
 <div class="container">

@@ -15,7 +15,7 @@ userID, userPassword, userName, userGender, userEmail
 <link rel="stylesheet" href="css/custom.css">
 <title>Join</title>
 </head>
-<body class="bg-gradient-primary">
+<body class="bg-gradient-primary" style="height:100%;">
 <%@include file="include/header.jsp"%>
 
 <div class="container">

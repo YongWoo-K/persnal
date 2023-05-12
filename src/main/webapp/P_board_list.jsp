@@ -52,7 +52,7 @@ for(P_BoardTO to : listTO.getBoardLists()){
 				sbHtml.append("<tr>");
 					sbHtml.append("<td>");
 					
-						sbHtml.append("<div class='card' style='width:236px'>");
+						sbHtml.append("<div class='card' style='width:250px'>");
 							//사진이 올라가있는 썸네일 -> 클릭시 board_view.jsp로 이동
 							sbHtml.append("<a href='P_board_view.jsp?cpage=" + cpage + "&seq=" + to.getSeq() + "'><img src='upload/" + to.getFilename() + "' class='card-img-top'/></a>");
 
@@ -106,7 +106,7 @@ for(P_BoardTO to : listTO.getBoardLists()){
 <link rel="stylesheet" href="css/custom.css">
 <title>Board List</title>
 </head>
-<body>
+<body style="height:100%;">
 <%@include file="include/header.jsp"%>
 
 <div class="container">
@@ -135,7 +135,7 @@ for(P_BoardTO to : listTO.getBoardLists()){
       </div>
       
       <%-- 페이징 --%>
-      <div class="d-flex justify-content-between mt-3 align-items-center">
+      <div class="d-flex justify-content-center mt-3 align-items-center">
       	<ul class="pagination"> 
       	<%
       	//이전페이지 이동
@@ -182,9 +182,12 @@ for(P_BoardTO to : listTO.getBoardLists()){
       	%>
       	</ul>
       	
-      	<input type="button" value="쓰기" class="btn btn-primary" onclick="location.href='P_board_write.jsp?cpage=<%=cpage%>'"/>
+      	
       </div>
       
+      <div class="d-flex justify-content-end mt-3">
+      	<input type="button" value="글쓰기" class="btn btn-primary" onclick="location.href='P_board_write.jsp?cpage=<%=cpage%>'"/>
+      </div>
       
       </div>
    </div>

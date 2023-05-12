@@ -9,13 +9,13 @@
 <link rel="stylesheet" href="css/custom.css">
 <title>BBS</title>
 </head>
-<body class="bg-gradient-primary">
+<body class="bg-gradient-primary" style="height:100%;">
 
 <%@include file="include/header.jsp"%>
 
 <div class="container contents-wrap">
-   <div class="row justify-content-center">
-      <div class="col-xl-10 col-lg-12 col-md-9">
+   <div class="row justify-content-center align-items-center">
+      <div class="col-lg-12 col-md-9">
       
       	<div class="card o-hidden border-0 shadow-lg my-5">
       		<div class="card-body p-0">
