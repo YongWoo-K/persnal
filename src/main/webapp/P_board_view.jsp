@@ -51,7 +51,7 @@ String seq_next = to_next.getSeq();
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <title></title>
 </head>
-<body style="height:100%;">
+<body>
 <%@include file="include/header.jsp"%>
 
 <div class="container">
@@ -123,6 +123,13 @@ String seq_next = to_next.getSeq();
       		out.println("<a href='P_board_view.jsp?cpage=" + cpage + "&seq=" + seq_before + "'>" + subject_before + "</a>");
       	}
       	%>
+      </div>
+      
+      <div>
+      	<a>.</a>
+      </div>
+      <div>
+      	<a>.</a>
       </div>
       
       </div>

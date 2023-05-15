@@ -1,9 +1,3 @@
-<%--
-
-userID, userPassword, userName, userGender, userEmail
-
- --%>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,7 +7,7 @@ userID, userPassword, userName, userGender, userEmail
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="css/custom.css">
-<title>Join</title>
+<title>myPage</title>
 </head>
 <body class="bg-gradient-primary">
 <%@include file="include/header.jsp"%>
@@ -29,10 +23,10 @@ userID, userPassword, userName, userGender, userEmail
 			      	<div class="col-lg-7">
 			      		<div class="p-5">
 			      			<div class="text-center">
-			      				<h1 class="h4 text-gray-900 mb-4">회원가입</h1>
+			      				<h1 class="h4 text-gray-900 mb-4">내 정보 수정</h1>
 			      			</div>
 			      				
-			      			<form method="post" action="P_joinAction.jsp">
+			      			<form method="post" action="P_myPageAction.jsp">
 			      				<div class="input-group mt-4">
 			      					<label class="input-group-text w15">아이디</label>
 			      					<input 
@@ -93,7 +87,7 @@ userID, userPassword, userName, userGender, userEmail
 			      					<input 
 			      					type="submit" 
 			      					class="form-control rounded-5 w85 btn btn-primary" 
-			      					value="회원가입"
+			      					value="수정"
 			      					>
 			      				</div>
 			      			</form>

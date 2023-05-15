@@ -32,7 +32,7 @@ if(request.getParameter("pageNumber") != null){
 
 	<div class="container-fluid">
 	
-		<a class="navbar-brand active" href="P_main.jsp">board</a>
+		<a class="navbar-brand active" href="P_main.jsp">Pet</a>
 		
 		<%-- 토글버튼 --%>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -47,7 +47,7 @@ if(request.getParameter("pageNumber") != null){
 			 	</li>
 			 	
 			 	<li class="nav-item">
-			 		<a class="nav-link" href="P_board_list.jsp">게시판</a>
+			 		<a class="nav-link" href="P_board_list.jsp">나의 애완동물</a>
 			 	</li>
 			 </ul>
 			 <%
@@ -85,13 +85,12 @@ if(request.getParameter("pageNumber") != null){
 			 	
 			 		<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">회원관리</a>
 			 		<ul class="dropdown-menu">
-			 			<%-- 이미 로그인 되어있는 상태이므로 로그인메뉴를 보여줄 필요 없다.
 			 			<li>
-			 				<a class="dropdown-item active" href="login.jsp">
-			 				로그인
+			 				<a class="dropdown-item active" href="P_myPage.jsp">
+			 				내 정보 수정
 			 				</a>
 			 			</li>
-			 			--%>
+			 			
 			 			<li>
 			 				<a class="dropdown-item" href="P_logoutAction.jsp">
 			 				로그아웃

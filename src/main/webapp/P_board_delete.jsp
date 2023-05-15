@@ -47,7 +47,7 @@ writer = to.getWriter();
 <script src="js/delete.js"></script>
 <title>Board Delete</title>
 </head>
-<body style="height:100%;">
+<body>
 <%@include file="include/header.jsp"%>
 
 <div class="container">
@@ -69,11 +69,15 @@ writer = to.getWriter();
       				<td>
       					<input type="text" name="writer" value="<%=writer%>" class="form-control">
       				</td>
+      			</tr>
+      			<tr>
       				<th>제목</th>
       				<td>
       					<input type="text" name="subject" value="<%=subject%>" class="form-control">
       				</td>
-      				<th>비밀번호</th>
+      			</tr>
+      			<tr>
+      			    <th>비밀번호</th>
       				<td>
       					<input type="password" name="password" value="" class="form-control">
       				</td>

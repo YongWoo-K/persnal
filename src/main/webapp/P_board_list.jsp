@@ -52,7 +52,7 @@ for(P_BoardTO to : listTO.getBoardLists()){
 				sbHtml.append("<tr>");
 					sbHtml.append("<td>");
 					
-						sbHtml.append("<div class='card' style='width:250px'>");
+						sbHtml.append("<div class='card' style='width:350px;'>");
 							//사진이 올라가있는 썸네일 -> 클릭시 board_view.jsp로 이동
 							sbHtml.append("<a href='P_board_view.jsp?cpage=" + cpage + "&seq=" + to.getSeq() + "'><img src='upload/" + to.getFilename() + "' class='card-img-top'/></a>");
 
@@ -106,10 +106,10 @@ for(P_BoardTO to : listTO.getBoardLists()){
 <link rel="stylesheet" href="css/custom.css">
 <title>Board List</title>
 </head>
-<body style="height:100%;">
+<body>
 <%@include file="include/header.jsp"%>
 
-<div class="container">
+<div class="container-fluid">
    <div class="row">
       <div class="col-md-12">
       
