@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/custom.css">
 <title>BBS</title>
 </head>
-<body class="bg-gradient-primary" style="height:100%;">
+<body class="bg-gradient-primary">
 
 <%@include file="include/header.jsp"%>
 

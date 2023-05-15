@@ -66,6 +66,23 @@ public class P_UserDAO {
 		return -1; //-> primary key인 아이디의 중복오류발생
 	}	
 	
+	//마이페이지 수정 메소드
+	public int mypage(P_User user) {
+		String sql = "UPDATE user1 set userPassword=?, userName=?, userGender=?, userEmail=? where userID=?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user.getUserPassword());
+			pstmt.setString(2, user.getUserName());
+			pstmt.setString(3, user.getUserGender());
+			pstmt.setString(4, user.getUserEmail());
+			pstmt.setString(5, user.getUserID());
+			return pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
+	
 /*
 	//DB연동
 	private DataSource dataSource;

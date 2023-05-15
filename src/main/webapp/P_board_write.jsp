@@ -28,7 +28,7 @@ if(userID1 == null){
 <script src="js/list.js"></script>
 <title>Board Write</title>
 </head>
-<body style="height:100%;">
+<body>
 <%@include file="include/header.jsp"%>
 
 <div class="container">
@@ -45,10 +45,6 @@ if(userID1 == null){
       	<input type="hidden" name="cpage" value="<%=cpage%>"/>
       	
       	<table class="table">
-      		<tr>
-      			<th>작성자</th>
-      			<td><input type="text" name="writer" class="form-control" maxlength="5" placeholder="이름을 입력해주세요."></td>
-      		</tr>
       		<tr>
       			<th>제목</th>
       			<td><input type="text" name="subject" class="form-control" maxlength="100" placeholder="제목을 입력해주세요."></td>

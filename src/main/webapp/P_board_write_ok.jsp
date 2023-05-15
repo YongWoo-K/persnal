@@ -8,6 +8,14 @@
 <%@ page import="java.io.File"%>
  
 <%
+//현재 세션상태를 체크한다.
+String userID1 = null;
+//세션의 userID값이 null이 아니라면 = 이미 로그인을 했다면
+if(session.getAttribute("userID") != null){
+	//userID를 세션의 userID값으로 설정
+	userID1 = (String)session.getAttribute("userID");
+}
+
 //cpage값을 요청
 String cpage = request.getParameter("cpage");
 
@@ -25,7 +33,7 @@ MultipartRequest multi = new MultipartRequest(request, uploadPath, maxFileSize, 
 //DefaultFileRenamePolicy() : 동일한 파일명이 존재한다면 파일명 뒤에 숫자를 붙이는 클래스 - 예시) text.jpg/text1.jpg/text2.jpg
 
 String subject = multi.getParameter("subject");
-String writer = multi.getParameter("writer");
+String writer = userID1;
 
 //필수 입력 항목이 아닌 항목들을 아래와 같이 검사 후 저장
 String mail = "";
