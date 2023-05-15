@@ -120,7 +120,7 @@ for(P_BoardTO to : listTO.getBoardLists()){
       	
       	<p>
       	총<span class="text-danger">
-      	<%=blockRecord%>
+      	<%=totalRecord%>
       	</span>건
       	</p>
       </div>
