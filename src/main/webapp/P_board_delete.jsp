@@ -33,7 +33,13 @@ P_BoardDAO dao = new P_BoardDAO();
 to.setSeq(seq);
 to.setSubject(subject);
 to.setWriter(writer);
-
+if(userID1 != writer){
+	PrintWriter script = response.getWriter();
+	script.println("<script>");
+	script.println("alert('접근권한이 없습니다.')");
+	script.println("location.href='P_board_list.jsp'");
+	script.println("</script>");
+}
 to = dao.boardDelete(to);
 
 subject = to.getSubject();
