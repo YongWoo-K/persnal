@@ -28,11 +28,11 @@ if(request.getParameter("pageNumber") != null){
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-success bg-opacity-50">
 
 	<div class="container-fluid">
 	
-		<a class="navbar-brand active" href="P_main.jsp">Pet</a>
+		<a class="navbar-brand active text-white" href="P_main.jsp">Pet</a>
 		
 		<%-- 토글버튼 --%>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -43,11 +43,11 @@ if(request.getParameter("pageNumber") != null){
 		
 			 <ul class="navbar-nav me-auto">
 			 	<li class="nav-item">
-			 		<a class="nav-link" href="P_main.jsp">메인</a>
+			 		<a class="nav-link text-white" href="P_main.jsp">Main</a>
 			 	</li>
 			 	
 			 	<li class="nav-item">
-			 		<a class="nav-link" href="P_board_list.jsp">나의 애완동물</a>
+			 		<a class="nav-link text-white" href="P_board_list.jsp">나의 애완동물</a>
 			 	</li>
 			 </ul>
 			 <%
@@ -58,10 +58,10 @@ if(request.getParameter("pageNumber") != null){
 			 
 			 	<li class="nav-item dropdown">
 			 	
-			 		<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">회원관리</a>
+			 		<a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">회원관리</a>
 			 		<ul class="dropdown-menu">
 			 			<li>
-			 				<a class="dropdown-item active" href="P_login.jsp">
+			 				<a class="dropdown-item" href="P_login.jsp">
 			 				로그인
 			 				</a>
 			 			</li>
@@ -80,13 +80,12 @@ if(request.getParameter("pageNumber") != null){
 			 //로그인이 되어있는 상태에서 보여지는 화면
 			 } else{%>
 			 <ul class="navbar-nav mr-auto">
-			 
+			 	<p class="nav-item text-white mt-2" type="text"><%=userID%>님 환영합니다.</p>
 			 	<li class="nav-item dropdown">
-			 	
-			 		<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">회원관리</a>
+			 		<a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">회원관리</a>
 			 		<ul class="dropdown-menu">
 			 			<li>
-			 				<a class="dropdown-item active" href="P_myPage.jsp">
+			 				<a class="dropdown-item" href="P_myPage.jsp">
 			 				내 정보 수정
 			 				</a>
 			 			</li>

@@ -1,0 +1,32 @@
+create database pet;
+
+use pet;
+
+CREATE TABLE `pet_board` (
+	`seq` INT NOT NULL AUTO_INCREMENT,
+	`subject` VARCHAR(150) NOT NULL,
+	`writer` VARCHAR(12) NOT NULL,
+	`mail` VARCHAR(50),
+	`PASSWORD` VARCHAR(12) NOT NULL,
+	`content` VARCHAR(2000),
+	`filename` VARCHAR(50),
+	`filesize` INT,
+	`hit` INT NOT NULL,
+	`wip` VARCHAR(15) NOT NULL,
+	`wdate` DATETIME NOT NULL,
+	PRIMARY KEY (`seq`)
+);
+
+CREATE TABLE `user1` (
+	`userID` VARCHAR(20) NOT NULL,
+	`userPassword` VARCHAR(20) NOT NULL,
+	`userName` VARCHAR(20) NOT NULL,
+	`userGender` VARCHAR(5) NOT NULL,
+	`userEmail` VARCHAR(20) NOT NULL,
+	PRIMARY KEY (`userID`)
+);
+
+create user "kyw"@"%" identified by "1234";
+
+grant all privileges on pet.* to "kyw"@"%";
+//-> kyw user에게 pet DB의 모든 권한 부여

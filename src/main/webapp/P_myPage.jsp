@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/custom.css">
 <title>myPage</title>
 </head>
-<body class="bg-gradient-primary">
+<body class="bg-success bg-opacity-25">
 <%@include file="include/header.jsp"%>
 
 <div class="container">
@@ -63,10 +63,10 @@
 			      				<div class="input-group mt-4">
 			      					<label class="input-group-text w15">성별</label>
 			      					<div class="btn-group" data-toggle="buttons">
-			      						<label class="btn btn-primary active">
+			      						<label class="btn btn-success active">
 			      							<input type="radio" name="userGender" autocomplete="off" value="남성" checked>남성
 			      						</label>
-			      						<label class="btn btn-primary">
+			      						<label class="btn btn-success">
 			      							<input type="radio" name="userGender" autocomplete="off" value="여성" checked>여성
 			      						</label>
 			      					</div>
@@ -86,10 +86,11 @@
 			      				<div class="input-group mt-4">
 			      					<input 
 			      					type="submit" 
-			      					class="form-control rounded-5 w85 btn btn-primary" 
+			      					class="form-control rounded-5 w40 btn btn-success" 
 			      					value="수정"
 			      					>
 			      				</div>
+			      				
 			      			</form>
 			      			
 			      		</div>	

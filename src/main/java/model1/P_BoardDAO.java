@@ -12,6 +12,8 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+import user.P_User;
+
 public class P_BoardDAO {
 	//db연동
 	private DataSource dataSource;
@@ -43,9 +45,7 @@ public class P_BoardDAO {
 			System.out.println("[error] : " + e.getMessage()); //-> 에러가 생길 경우 출력
 		}
 	}
-	
-	
-	 
+		 
 	//write() 
 	public void boardWrite() {
 		
@@ -464,6 +464,31 @@ public class P_BoardDAO {
 			if(conn != null) {try {conn.close();}catch(SQLException e) {}}
 		}
 		return flag;
+	}
+	
+	//작성자 체크
+	public P_BoardTO checkWriter(P_BoardTO to) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = dataSource.getConnection();
+			String sql = "SELECT writer FROM pet_board WHERE seq = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, to.getSeq());
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				String writer = rs.getString("writer");
+				to.setWriter(writer);
+			}
+		}catch(SQLException e) {
+			System.out.println("error : " + e.getMessage());
+		}finally {
+			if(rs != null) {try {rs.close();}catch(SQLException e) {}}
+			if(pstmt != null) {try {pstmt.close();}catch(SQLException e) {}}
+			if(conn != null) {try {conn.close();}catch(SQLException e) {}}
+		}
+		return to;
 	}
 	
 	//modify(수정) : 글과 올려놓은 사진을 바꿔치기

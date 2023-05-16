@@ -5,14 +5,14 @@ request.setCharacterEncoding("UTF-8");
 String cpage = request.getParameter("cpage");
 
 //현재 세션상태를 체크한다.
-String userID1 = null;
+String user_ID = null;
 //세션의 userID값이 null이 아니라면 = 이미 로그인을 했다면
 if(session.getAttribute("userID") != null){
 	//userID를 세션의 userID값으로 설정
-	userID1 = (String)session.getAttribute("userID");
+	user_ID = (String)session.getAttribute("userID");
 }
 //로그인 하지 않은 경우 로그인 하도록 유도
-if(userID1 == null){
+if(user_ID == null){
 	PrintWriter script = response.getWriter();
 	script.println("<script>");
 	script.println("alert('먼저 로그인 해주세요.')");

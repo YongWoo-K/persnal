@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/custom.css">
 <title>BBS</title>
 </head>
-<body class="bg-gradient-primary">
+<body class="bg-success bg-opacity-25">
 
 <%@include file="include/header.jsp"%>
 
@@ -50,7 +50,7 @@
 	      							>
 	      						</div>
 	      						
-	      						<input type="submit" class="btn btn-primary form-control rounded-5" value="로그인">
+	      						<input type="submit" class="btn btn-success form-control rounded-5" value="로그인">
       						</form>
       						
       						<div class="text-center">

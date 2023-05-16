@@ -6,14 +6,14 @@
 request.setCharacterEncoding("UTF-8");
  
 //현재 세션상태를 체크한다.
-String userID1 = null;
+String user_ID = null;
 //세션의 userID값이 null이 아니라면 = 이미 로그인을 했다면
 if(session.getAttribute("userID") != null){
 	//userID를 세션의 userID값으로 설정
-	userID1 = (String)session.getAttribute("userID");
+	user_ID = (String)session.getAttribute("userID");
 }
 //로그인 하지 않은 경우 로그인 하도록 유도
-if(userID1 == null){
+if(user_ID == null){
 	PrintWriter script = response.getWriter();
 	script.println("<script>");
 	script.println("alert('먼저 로그인 해주세요.')");
@@ -33,13 +33,6 @@ P_BoardDAO dao = new P_BoardDAO();
 to.setSeq(seq);
 to.setSubject(subject);
 to.setWriter(writer);
-if(userID1 != writer){
-	PrintWriter script = response.getWriter();
-	script.println("<script>");
-	script.println("alert('접근권한이 없습니다.')");
-	script.println("location.href='P_board_list.jsp'");
-	script.println("</script>");
-}
 to = dao.boardDelete(to);
 
 subject = to.getSubject();
